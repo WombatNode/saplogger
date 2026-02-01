@@ -7,6 +7,7 @@ import json
 import time
 import sys
 import getpass
+import argparse
 from collections import defaultdict
 
 MAX_ATTEMPTS = 3
@@ -167,9 +168,16 @@ stats_file = f"{base_dir}/stats.json"
 
 # Start logic
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(prog='getlog',
+                    description='Get stats for Super Auto Pets')
+    parser.add_argument('-s', '--stats', action='store_true', help='download stats, i.e. games played pet pack, pets/food bought, etc.')
+    parser.add_argument('-g', '--games', action='store_true', help='download games, i.e. most recent 20 games')
+    args = parser.parse_args()
     auth_header = authenticate(token_file)
-    # load_history(auth_header)
-    load_stats(auth_header)
+    if args.games:
+        load_history(auth_header)
+    if args.stats:
+        load_stats(auth_header)
 
 
 
