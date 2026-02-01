@@ -1,0 +1,30 @@
+{
+    "version": 45,
+    "metrics": {
+        "0": "Losses",
+        "1": "Wins",
+        "2": "Abandons",
+        "3": "RoundLosses",
+        "4": "RoundDraws",
+        "5": "RoundWins",
+        "6": "Snacks",
+        "7": "Pet",
+        "9": "Food"    
+    },
+    "modes": {
+        "0": "Versus",
+        "1": "Arena"
+    },
+    "packs": {
+        "0": "Turtle",
+        "1": "Puppy",
+        "2": "Star",
+        "3": "Custom",
+        "4": "Weekly",
+        "5": "Golden",
+        "6": "Unicorn",
+        "7": "Danger",
+        "11": "Wacky"
+    }
+
+}
